@@ -53,16 +53,7 @@ VALUES (
 )
 INSERT INTO blog_user(first_name,last_name,dob,date_joined,password,email,user_type_id)
 VALUES(
-    'Ken',
-    'Alger',
-    '1976/03/12',
-    07904362736,
-    '2000/12/12',
-    2,
-    12,
-    1,
-    null
-);
+
 INSERT INTO `category` (`category`) VALUES
 ('Fiction'),
 ('Fantasy'),
@@ -79,21 +70,7 @@ INSERT INTO `blog` (`title`, `date_created`, `user_id`, `category_id`, `content_
 ();
 
 INSERT INTO `movie` (`title`, `release_date`, `director`, `category_id`, `blog_id`) VALUES
-('Riders', '2015/06/04', 1, 1, 1),
-('Harry Potter and the Philosophers Stone', '2014/09/01', 2, 2, 2),
-('Murder on The Oxford Canal', '2017/10/02', 3, 3, 3),
-('A History Computing: From Main','2017/04/10', 4, 4, 4),
-('Covent Garden in the Snow', '2017/11/16', 5, 5, 5),
-('James Bond', '2003/02/01', 1, 1, 6),
-('IT', '2004/03/02', 1, 6, 7),
-('Green Eggs and Ham', '2005/04/05', 2, 7, 8),
-('Pip the Pixie', '2006/05/06', 1, 7, 9),
-('Goosebumps', '2007/06/07', 1, 6, 10),
-('The Twits', '2008/04/07', 2, 1, 11),
-('The Lion the Witch and the Wardrobe', '2009/08/09', 3, 2, 12),
-('Peter Rabbit', '2010/09/10', 2, 7, 13),
-('50 Shades of Grey', '2011/10/11', 5, 5, 14),
-('Alice in Wonderland', '2012/11/12', 1, 2, 15);
+
 
 -- 
 -- 
