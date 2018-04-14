@@ -54,7 +54,7 @@ INSERT INTO `content` (`content`) VALUES
 ('example blog post');
 
 
-INSERT INTO category (category) VALUES ('Romance'), ('Comedy'), ('Science Fiction'), ('Horror'), ('Action'), ('Thriller'), ('Drama'), ('Mystery'), ('Crime'),('Animation'), ('Adventure'), ('Fantasy')
+INSERT INTO category (category) VALUES ('Romance'), ('Comedy'), ('Science Fiction'), ('Horror'), ('Action'), ('Thriller'), ('Drama'), ('Mystery'), ('Crime'),('Animation'), ('Adventure'), ('Fantasy');
 
 INSERT INTO movie (title, release_year, director, category_id) VALUES
 ('Love Actually', '2003', 'Richard Curtis', 1),
