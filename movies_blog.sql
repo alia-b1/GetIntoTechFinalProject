@@ -37,7 +37,7 @@ CREATE TABLE blog ( ID integer not null PRIMARY KEY AUTO_INCREMENT,
 ) ENGINE=INNODB;
 CREATE TABLE movie ( ID integer not null PRIMARY KEY AUTO_INCREMENT,
                title varchar(50) not null,
-               release_date date,
+               release_year year,
                director varchar(80),
 	       category_id int not null,
 	       blog_id int,
@@ -45,21 +45,16 @@ CREATE TABLE movie ( ID integer not null PRIMARY KEY AUTO_INCREMENT,
 	       FOREIGN KEY (blog_id) REFERENCES blog(ID)
 ) ENGINE=INNODB;
 
-
-
 INSERT INTO user_type (type) 
 VALUES (
 'admin'
-)
-INSERT INTO blog_user(first_name,last_name,dob,date_joined,password,email,user_type_id)
-VALUES(
-
+);
 
 INSERT INTO `content` (`content`) VALUES 
 ('example blog post');
 
-INSERT INTO `blog` (`title`, `date_created`, `user_id`, `category_id`, `content_id`) VALUES
-();
+
+INSERT INTO category (category) VALUES ('Romance'), ('Comedy'), ('Science Fiction'), ('Horror'), ('Action'), ('Thriller'), ('Drama'), ('Mystery'), ('Crime'),('Animation'), ('Adventure'), ('Fantasy')
 
 INSERT INTO movie (title, release_year, director, category_id) VALUES
 ('Love Actually', '2003', 'Richard Curtis', 1),
