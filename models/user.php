@@ -22,19 +22,5 @@ abstract class User {
         
     }
 
-//    public function showName() {
-//        return $this->first_name . ' ' . $this->last_name . "\n";
-//    }
-//    public function showdob() {
-//        return $this->dob;
-//    }   
-//    public function showDateJoined() {
-//        return $this->date_joined. "\n";
-//    }
-//    public function changeEmail($new) {
-//        $this->email = $new;
-//    }
-//    public function changePassword($new) {
-//        $this->password = $new;
-//    }
+
 }
