@@ -36,7 +36,6 @@ if($administrator){
  
 public static function update($email, $first_name, $last_name, $password, $dob) {
     $db = Db::getInstance();
-    $sessionemail=$_POST['email'];
     $req = $db->prepare("Update blog_user set email=:email, first_name=:first_name last_name=:last_name, password=:password, dob=:dob where id=:id");
     $req->bindParam(':email', $email);
     $req->bindParam(':first_name', $first_name);
