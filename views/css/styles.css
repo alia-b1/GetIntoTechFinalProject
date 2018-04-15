@@ -1,10 +1,12 @@
-html, body, h1, h2, h3, h4, h5, h6 {
- font-family: 'Pangolin', cursive;
+@font-face {
+    font-family: 'parisianregular';
+    src: url('parisian-webfont.woff2') format('woff2'),
+         url('parisian-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-.w3-tangerine {
-  font-family: 'Tangerine', serif;
-}
-.w3-pacifico {
-    font-family: 'Pacifico', cursive;
+ 
+body {
+    font-family: 'parisianregular'
 }
 
