@@ -10,7 +10,10 @@
     <div class="container">
         <header class="blog-header py-3">
           <div class="row flex-nowrap justify-content-between align-items-center">
-            <div class="col-12 d-flex justify-content-end">
+            <div class="col-6 d-flex justify-content-start">
+              <a class="btn btn-sm btn-outline-secondary" href='?controller=pages&action=home'>Home</a>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
               <a class="btn btn-sm btn-outline-secondary" href='?controller=user&action=login'>Sign up</a>
             </div>
           </div>
