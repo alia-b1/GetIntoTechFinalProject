@@ -12,25 +12,27 @@ populated earlier within the page processing</p>
     <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
   </div>
 </div>
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-          <img class="d-block w-50" src="https://images.unsplash.com/photo-1510511450816-30c68106b199?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=95c56fcf47f4a9e8613adf8a0f080966&auto=format&fit=crop&w=1350&q=80" alt="First slide">
-          <div class="carousel-caption d-none d-md-block">
-          <h5>A Blog of amazing reviews and content</h5>
-          <p>Check back for the latest reviews and vote up your favourites</p>
-    </div>
-    </div>
-        <div class="carousel-item">
-          <img class="d-block w-50" src="https://images.unsplash.com/photo-1506805194200-16575ef455e6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2300c6caffb0b565004b5a638ec246fe&auto=format&fit=crop&w=667&q=80https://images.unsplash.com/photo-1506805194200-16575ef455e6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2300c6caffb0b565004b5a638ec246fe&auto=format&fit=crop&w=667&q=80" alt="Second slide">
+<div class="row justify-content-center">
+    <div class="col-6">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img class="d-block w-100" src="https://images.unsplash.com/photo-1510511450816-30c68106b199?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=95c56fcf47f4a9e8613adf8a0f080966&auto=format&fit=crop&w=1350&q=80" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block">
+                  <h5>A Blog of amazing reviews and content</h5>
+                  <p>Check back for the latest reviews and vote up your favourites</p>
+            </div>
+            </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://images.unsplash.com/photo-1506805194200-16575ef455e6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2300c6caffb0b565004b5a638ec246fe&auto=format&fit=crop&w=667&q=80https://images.unsplash.com/photo-1506805194200-16575ef455e6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2300c6caffb0b565004b5a638ec246fe&auto=format&fit=crop&w=667&q=80" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="https://images.unsplash.com/photo-1508427991396-70954459dcc4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b5e41cb3f5a9a0fe00f821c4f4fccd3&auto=format&fit=crop&w=750&q=80" alt="Third slide">
+                </div>
+            </div> 
         </div>
-        <div class="carousel-item">
-          <img class="d-block w-50" src="https://images.unsplash.com/photo-1508427991396-70954459dcc4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b5e41cb3f5a9a0fe00f821c4f4fccd3&auto=format&fit=crop&w=750&q=80" alt="Third slide">
-        </div>
-    </div> 
+    </div>
 </div>
-
 
 <div class="row mb-2">
   <div class="col-md-6">
