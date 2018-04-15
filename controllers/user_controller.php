@@ -1,0 +1,25 @@
+<?php
+include ('C:\xampp\htdocs\GetIntoTechFinalProject\models\login.php');
+class UserController {
+
+    public function login() {
+        if($_SERVER['REQUEST_METHOD'] == 'GET'){
+          require_once('views/pages/login.php');
+          
+      }
+      else { 
+          
+          if (!isset($_POST['email']) || !isset($_POST['password'])){
+              return call('pages', 'error');
+          }
+          
+           $user = Login::loginUser($_POST['email'], $_POST['password']);
+            $first_name=$user->first_name;
+            $last_name = $user->last_name;
+
+            require_once('views\pages\home.php');
+      }
+      require_once('views/pages/login.php');
+    }    
+    
+}
