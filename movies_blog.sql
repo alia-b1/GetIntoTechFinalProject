@@ -45,6 +45,10 @@ CREATE TABLE movie ( ID integer not null PRIMARY KEY AUTO_INCREMENT,
 	       FOREIGN KEY (blog_id) REFERENCES blog(ID),
 movie_poster varchar(250)
 ) ENGINE=INNODB;
+CREATE TABLE comments (ID integer not null PRIMARY KEY AUTO_INCREMENT,
+               comment text not null,
+               commenter_name varchar(20)
+) ENGINE=INNODB;
 
 INSERT INTO user_type (type) 
 VALUES (
