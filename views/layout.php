@@ -13,7 +13,7 @@
     <header class="w3-container w3-gray">
       <a href='/MVC_Skeleton'>Home</a>
       <a href='?controller=product&action=readAll'>Products</a>
-      <a href='?controller=pages&action=login'>Login</a>
+      <a href='?controller=user&action=login'>Login</a>
     </header>
 <div class="w3-container w3-pink">
     <?php require_once('routes.php'); ?>
