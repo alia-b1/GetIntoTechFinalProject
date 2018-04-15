@@ -13,9 +13,11 @@ class UserController {
               return call('pages', 'error');
           }
           
-            Login::loginUser($_POST['email'], $_POST['password']);
+           $user = Login::loginUser($_POST['email'], $_POST['password']);
+            $first_name=$user->first_name;
+            $last_name = $user->last_name;
 
-            require_once('C:\xampp\htdocs\GetIntoTechFinalProject\index.php');
+            require_once('views\pages\home.php');
       }
       require_once('views/pages/login.php');
     }    

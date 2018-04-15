@@ -1,13 +1,6 @@
 <?php
     session_start();
-    $path = "C:\xampp\htdocs\GetIntoTechFinalProject\models\login.php";
-    include $path; 
-    if (!empty($_POST)){
-        $email= filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-        $password= $_POST["password"];
-        $log->loginUser();
-        
-    }
+
     
 ?>
 <!DOCTYPE html>
@@ -21,7 +14,7 @@
    <body>
        <div class="container py-3">
            <h2 class="instructions">Please login</h2>
-           <form class="py-3" action="#" method="post">
+           <form class="py-3" method="post">
                <div class="form-group">
                    <label for="exampleDropdownFormEmail1">Email</label>
                    <input type="email" name="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Email">
