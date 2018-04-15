@@ -5,6 +5,11 @@ CREATE TABLE user_type(ID INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     	       type VARCHAR(30	) not null
 ) ENGINE = INNODB;
 
+INSERT INTO `user_type` (`ID`, `type`) VALUES
+(1, 'administrator'),
+(2, 'blogger'),
+(3, 'reader');
+
 CREATE TABLE blog_user( ID integer not null PRIMARY KEY AUTO_INCREMENT,
                    first_name varchar(20) not null,
                    last_name varchar(30) not null,
@@ -16,6 +21,11 @@ CREATE TABLE blog_user( ID integer not null PRIMARY KEY AUTO_INCREMENT,
                    FOREIGN KEY (user_type_id) REFERENCES user_type(ID)
 ) ENGINE=INNODB;
 
+INSERT INTO `blog_user` (`ID`, `first_name`, `last_name`, `dob`, `date_joined`, `password`, `email`, `user_type_id`) VALUES
+(1, 'Laura', 'Davis', '1987-10-09', '2018-04-15', 'iluvcode', 'lauralizziedavis@gmail.com', 1),
+(2, 'Alia', 'Barakzai', '1997-09-15', '2018-04-15', 'teenyweeny', 'alia-b@hotmail.co.uk', 1),
+(3, 'Penny', 'Fordred', '1997-06-22', '0000-00-00', 'jasoniscool', 'pfordred@hotmail.co.uk', 1),
+(4, 'Lara', 'Phillips', '1989-09-27', '2018-04-15', 'rockorocks', 'lara_phillips@hotmail.com', 1);
 
 CREATE TABLE category ( ID integer not null PRIMARY KEY AUTO_INCREMENT,
                category varchar(30)
