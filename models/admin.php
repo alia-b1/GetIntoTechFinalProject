@@ -2,14 +2,25 @@
 
 include_once'user.php';
 
-class Blogger extends User {
+class Admin extends User {
+
+    public static function all() {
+      $list = [];
+      $db = Db::getInstance();
+      $req = $db->query('SELECT * FROM blog_user');
+      // we create a list of Product objects from the database results
+      foreach($req->fetchAll() as $blogger) {
+        $list[] = new Blogger($blogger['$id'],$blogger['first_name'], $blogger['last_name'], $blogger['dob'], $blogger['date_joined'], $blogger['password'],$blogger['email']);
+      }
+      return $list;
+    } 
 
     public static function find($id) {
       $db = Db::getInstance();
       //use intval to make sure $id is an integer
       $id = intval($id);
-      $req = $db->prepare('SELECT * FROM blog_user WHERE id = :id, user_type_id = 2');
-      //the query was prepared, now replace :id with the actual $id value
+      $req = $db->prepare('SELECT * FROM blog_user WHERE id = :id');
+//      the query was prepared, now replace :id with the actual $id value
       $req->execute(array('id' => $id));
       $blogger = $req->fetch();
 if($blogger){
@@ -25,7 +36,7 @@ if($blogger){
 public static function update($email, $first_name, $last_name, $password, $dob) {
     $db = Db::getInstance();
     $sessionemail=$_POST['email'];
-    $req = $db->prepare("Update blog_user set email=:email, first_name=:first_name last_name=:last_name, password=:password, dob=:dob where email=$sessionemail");
+    $req = $db->prepare("Update blog_user set email=:email, first_name=:first_name last_name=:last_name, password=:password, dob=:dob where id=:id");
     $req->bindParam(':email', $email);
     $req->bindParam(':first_name', $first_name);
     $req->bindParam(':last_name', $last_name);
@@ -63,6 +74,26 @@ $req->execute();
 
     }
     
+    public static function add() {
+    $db = Db::getInstance();
+    $req = $db->prepare("Insert into product(name, price) values (:name, :price)");
+    $req->bindParam(':name', $name);
+    $req->bindParam(':price', $price);
+
+// set parameters and execute
+    if(isset($_POST['name'])&& $_POST['name']!=""){
+        $filteredName = filter_input(INPUT_POST,'name', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+    if(isset($_POST['price'])&& $_POST['price']!=""){
+        $filteredPrice = filter_input(INPUT_POST,'price', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+$name = $filteredName;
+$price = $filteredPrice;
+$req->execute();
+
+//upload product image
+Product::uploadFile($name);
+    }
 
 const AllowedTypes = ['image/jpeg', 'image/jpg'];
 const InputKey = 'myUploader';
