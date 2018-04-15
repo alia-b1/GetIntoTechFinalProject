@@ -1,5 +1,4 @@
 <?php
-include ('C:\xampp\htdocs\GetIntoTechFinalProject\models\login.php');
 class UserController {
 
     public function login() {
