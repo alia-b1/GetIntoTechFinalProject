@@ -3,7 +3,7 @@
  
 include_once'user.php'; 
  
-class Admin extends User { 
+class Administrator extends User { 
  
 //    public static function all() { 
 //      $list = []; 
@@ -14,7 +14,7 @@ class Admin extends User {
 //        $list[] = new Blogger($blogger['$id'],$blogger['first_name'], $blogger['last_name'], $blogger['dob'], $blogger['date_joined'], $blogger['password'],$blogger['email']); 
 //      } 
 //      return $list; 
-//    } should only be for admin 
+//    } should only be for administrator 
  
     public static function find($id) { 
       $db = Db::getInstance(); 
@@ -23,9 +23,9 @@ class Admin extends User {
       $req = $db->prepare('SELECT * FROM blog_user WHERE id = :id, user_type_id = 1'); 
       //the query was prepared, now replace :id with the actual $id value 
       $req->execute(array('id' => $id)); 
-      $admin = $req->fetch(); 
-if($admin){ 
-      return new Admin($admin['first_name'], $admin['last_name'], $admin['date_joined']); 
+      $administrator = $req->fetch(); 
+if($administrator){ 
+      return new Administrator($administrator['first_name'], $administrator['last_name'], $administrator['date_joined']); 
     } 
     else 
     { 
