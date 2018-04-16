@@ -32,19 +32,51 @@ class User {
             if ($user){
                 return new User($user['ID'],$user['first_name'], $user['last_name'], $user['type']);
             }
-//            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-//                $_SESSION["id"]=$row["ID"];
-//                $_SESSION["firstName"]=$row["first_name"];
-//                $_SESSION["lastName"]=$row["last_name"];
-//                if($row["type"] =='librarian'){
-//                    echo $row["type"];
-//                    header("Location:librarianAccountPage.php");
-//                }else{
-//                    header("Location:memberAccountPage.php");
-//                }
-//            }
+
         } catch (PDOException $e) {
             die("Could not login ....." . $e->getMessage());
+        }
+        unset($stmt);
+    }
+    
+     public function register($emailinput, $passwordinput, $firstnameinput, $lastnameinput, $dobinput) {
+        $db = Db::getInstance();
+        // Insert new user
+        $req = $db->prepare("INSERT INTO blog_user (dob, email, first_name, last_name, password, user_type_id) VALUES (:dob, :email, :first_name, :last_name, :password, 1)");
+        $req->bindParam(':email', $email);
+        $req->bindParam(':password', $password);
+        $req->bindParam(':first_name', $first_name);
+        $req->bindParam(':last_name', $last_name);
+        $req->bindParam(':dob', $dob);
+        try {
+            if($emailinput && $emailinput !=""){
+                 $filteredEmail = filter_input(INPUT_POST,'email', FILTER_SANITIZE_SPECIAL_CHARS);
+            }    
+            if($passwordinput && $passwordinput !=""){
+                 $filteredPassword = filter_input(INPUT_POST,'password', FILTER_SANITIZE_SPECIAL_CHARS);
+            }
+            if($firstnameinput && $firstnameinput !=""){
+                 $filteredfirst_name = filter_input(INPUT_POST,'first_name', FILTER_SANITIZE_SPECIAL_CHARS);
+            }    
+            if($lastnameinput && $lastnameinput !=""){
+                 $filteredlast_name = filter_input(INPUT_POST,'last_name', FILTER_SANITIZE_SPECIAL_CHARS);               
+            }   
+            $email = $filteredEmail;
+            $password = $filteredPassword;
+            $first_name = $filteredfirst_name;
+            $last_name = $filteredlast_name;
+            $dob = $dobinput; 
+            $req->execute();
+            
+            // Get new user after creating it
+            $new_user_req = $db->prepare("SELECT u.ID, u.first_name, u.last_name, t.type FROM blog_user as u INNER JOIN user_type as t ON u.user_type_id=t.ID WHERE u.email= :email");
+            $new_user_req->bindParam(':email', $email);
+            $new_user_req->execute();
+            $user=$new_user_req->fetch();
+            return new User($user['ID'],$user['first_name'], $user['last_name'], $user['type']);
+
+        } catch (PDOException $e) {
+            die("Could not signup ....." . $e->getMessage());
         }
         unset($stmt);
     }

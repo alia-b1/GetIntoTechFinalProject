@@ -27,15 +27,15 @@ class UserController {
           
       }
       else { 
-//          if (!isset($_POST['email']) || !isset($_POST['password'])){
-//              return call('pages', 'error');
-//          }
-//          
-//           $user = User::loginUser($_POST['email'], $_POST['password']);
-//            $first_name=$user->first_name;
-//            $last_name = $user->last_name;
-//
-//            require_once('views/pages/home.php');
+          if (!isset($_POST['email']) || !isset($_POST['password']) || !isset($_POST['first_name']) || !isset($_POST['last_name']) || !isset($_POST['dob'])){
+              return call('pages', 'error');
+          }
+          
+           $user = User::register($_POST['email'], $_POST['password'], $_POST['first_name'],$_POST['last_name'],$_POST['dob']);
+            $first_name=$user->first_name;
+            $last_name = $user->last_name;
+
+            require_once('views/pages/home.php');
       }
      
     }    
