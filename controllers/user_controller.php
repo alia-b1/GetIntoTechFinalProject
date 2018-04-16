@@ -12,13 +12,13 @@ class UserController {
               return call('pages', 'error');
           }
           
-           $user = Login::loginUser($_POST['email'], $_POST['password']);
+           $user = User::loginUser($_POST['email'], $_POST['password']);
             $first_name=$user->first_name;
             $last_name = $user->last_name;
 
-            require_once('views\pages\home.php');
+            require_once('views/pages/home.php');
       }
-      require_once('views/pages/login.php');
+     
     }    
     
 }

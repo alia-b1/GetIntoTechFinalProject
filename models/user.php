@@ -1,6 +1,6 @@
 <?php
 
-class Login {
+class User {
     protected $ID;
     public $first_name;
     public $last_name;
@@ -30,7 +30,7 @@ class Login {
             $req->execute();
             $user=$req->fetch();
             if ($user){
-                return new Login($user['ID'],$user['first_name'], $user['last_name'], $user['type']);
+                return new User($user['ID'],$user['first_name'], $user['last_name'], $user['type']);
             }
 //            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 //                $_SESSION["id"]=$row["ID"];
