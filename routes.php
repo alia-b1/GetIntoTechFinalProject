@@ -27,6 +27,7 @@
 $controllers = array('pages' => ['home', 'error'],
                     'product' => ['readAll','read','create','update','delete'],
                     'user' => ['login'],
+                     'blog' => ['readAll','read', 'create'],
                     'controllerXXX' => ['actionYYY', 'actionZZZ'],
                     );
 
