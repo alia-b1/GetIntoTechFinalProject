@@ -14,7 +14,8 @@
               <a class="btn btn-sm btn-outline-secondary" href='?controller=pages&action=home'>Home</a>
             </div>
             <div class="col-6 d-flex justify-content-end">
-              <a class="btn btn-sm btn-outline-secondary" href='?controller=user&action=login'>Sign up</a>
+                <a class="btn btn-sm btn-outline-secondary" href='?controller=user&action=register'>Sign up</a>
+                <a class="btn btn-sm btn-outline-secondary" href='?controller=user&action=login'>Login</a>
             </div>
           </div>
         </header>
