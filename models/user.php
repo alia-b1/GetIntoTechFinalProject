@@ -48,6 +48,33 @@ class User {
         }
         unset($stmt);
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
             public static function findAll($search) { 
       $db = Db::getInstance(); 
       //use intval to make sure $id is an integer 

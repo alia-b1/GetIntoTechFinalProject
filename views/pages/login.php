@@ -20,8 +20,6 @@ and open the template in the editor.
 
 <?php
     session_start();
-    $email = $_SESSION['email'];
-    $password = $_SESSION['password'];
 ?>
 <div class="container py-3">
     <h2 class="instructions">Please login</h2>

@@ -26,7 +26,7 @@
    <a href="#">November 2017</a>
    <a href="#">October 2017</a>
    </div>
-   <a href="http://localhost/GetIntoTechFinalProject/index.php?controller=user&action=login">Login</a></div>
+ </div>
    <div class="topnav-right">
 
 <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
