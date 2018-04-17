@@ -13,6 +13,10 @@
             <div class="col-6 d-flex justify-content-start">
               <a class="btn btn-sm btn-outline-secondary" href='?controller=pages&action=home'>Home</a>
             </div>
+              <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-6 d-flex justify-content-start">
+              <a class="btn btn-sm btn-outline-secondary" href='?controller=blog&action=readAll'>All Blogs</a>
+            </div>
             <div class="col-6 d-flex justify-content-end">
               <a class="btn btn-sm btn-outline-secondary" href='?controller=user&action=login'>Sign up</a>
             </div>
@@ -25,7 +29,9 @@
         </div>
         
         <div class="w3-container w3-pink">
-            <?php require_once('C:\xampp\htdocs\GetIntoTechFinalProject\routes.php'); ?>
+            <?php $path = '/Applications/XAMPP/htdocs/GetIntoTechFinalProject';
+set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+    require_once('routes.php'); ?>
         </div>
     </div>
       

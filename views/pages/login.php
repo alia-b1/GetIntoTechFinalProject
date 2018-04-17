@@ -6,7 +6,6 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
 
     <!-- Nav Bar -->
         
