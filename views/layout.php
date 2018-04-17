@@ -60,7 +60,9 @@
         </div>
         
         <div class="w3-container w3-pink">
-            <?php $path = '/Applications/XAMPP/htdocs/GetIntoTechFinalProject';
+            <?php
+            session_start();
+            $path = '/Applications/XAMPP/htdocs/GetIntoTechFinalProject';
 set_include_path(get_include_path() . PATH_SEPARATOR . $path);
     require_once('routes.php'); ?>
         </div>

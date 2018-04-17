@@ -19,7 +19,14 @@ and open the template in the editor.
 </body>
 
 <?php
-    session_start();
+//<<<<<<< Updated upstream
+//=======
+if(!empty($_POST)){
+$_SESSION["email"] = $_POST['email'];
+$_SESSION["password"] = $_POST['password'];
+}
+
+//>>>>>>> Stashed changes
 ?>
 <div class="container py-3">
     <h2 class="instructions">Please login</h2>

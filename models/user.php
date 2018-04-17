@@ -84,13 +84,13 @@ class User {
             public static function findAll($search) { 
       $db = Db::getInstance(); 
       //use intval to make sure $id is an integer 
-      $req = $db->prepare('SELECT blog.title, blog.date_created, movie.title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
+      $req = $db->prepare('SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
                     . "INNER JOIN movie ON blog.movie_id=movie.ID "
                     . "INNER JOIN blog_user ON blog.user_id=blog_user.ID "
-                    . "WHERE blog.title LIKE :search UNION SELECT blog.title, blog.date_created, movie.title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
+                    . "WHERE blog.title LIKE :search UNION SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
                     .  "INNER JOIN movie ON blog.movie_id=movie.ID "
                     . "INNER JOIN blog_user ON blog.user_id=blog_user.ID "
-                    . "WHERE movie.title LIKE :search UNION SELECT blog.title, blog.date_created, movie.title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
+                    . "WHERE movie.movie_title LIKE :search UNION SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
                     . "INNER JOIN movie ON blog.movie_id=movie.ID "
                     . "INNER JOIN blog_user ON blog.user_id=blog_user.ID "'); 
       //the query was prepared, now replace :id with the actual $id value 
