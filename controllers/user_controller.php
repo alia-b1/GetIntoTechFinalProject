@@ -20,21 +20,18 @@ class UserController {
       }
      
     }
-    public function read() {
+    public function search() {
       // we expect a url of form ?controller=posts&action=show&id=x
       // without an id we just redirect to the error page as we need the post id to find it in the database
-      if (!isset($_GET['id'])){
-        return call('pages', 'error');
-      }
-      try{
+//      if (!isset($_POST[''])){
+//        return call('pages', 'error');
+//      }
+//      try{
       // we use the given id to get the correct post
-      $user = User::findAll($_GET['search']);
+      $user = User::findAll($_GET[':search']);
 //      $user = Blogger::find($id);
       require_once('views/pages/search.php');
       }
- catch (Exception $ex){
-     return call('pages','error');
- }
-    }    
+
+}    
     
-}
