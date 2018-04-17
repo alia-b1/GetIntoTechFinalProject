@@ -7,7 +7,7 @@
     <title>Shopping Cart</title>
   </head>
   <body>
-    <div class="container">
+<!--    <div class="container">
         <header class="blog-header py-3">
           <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-6 d-flex justify-content-start">
@@ -18,12 +18,8 @@
             </div>
           </div>
         </header>
-
-        <div class="nav-scroller py-1 mb-2">
-          <nav class="nav d-flex justify-content-between">
-            <a class="p-2 text-muted" href='?controller=product&action=readAll'>Products</a>
           </nav>
-        </div>
+        </div>-->
         
         <div class="w3-container w3-pink">
             <?php require_once('routes.php'); ?>
@@ -31,9 +27,9 @@
     </div>
       
     <div class="w3-container w3-gray">
-        <footer >
+<!--        <footer >
             Copyright &COPY; <?= date('Y'); ?>
-        </footer>
+        </footer>-->
     </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
