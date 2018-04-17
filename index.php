@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>MVC Skeleton</title>
+        <title>Blah Blah Land</title>
     </head>
     <body>
         <?php

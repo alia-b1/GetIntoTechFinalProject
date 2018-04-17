@@ -1,6 +1,6 @@
 <?php
-class UserController {
 
+class UserController {
     public function login() {
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
           require_once('views/pages/login.php');
@@ -19,8 +19,8 @@ class UserController {
             require_once('views/pages/home.php');
       }
      
-    }    
-    
+    }
+
     public function register() {
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
           require_once('views/pages/register.php');
@@ -40,4 +40,18 @@ class UserController {
      
     }    
     
-}
+    public function search() {
+      // we expect a url of form ?controller=posts&action=show&id=x
+      // without an id we just redirect to the error page as we need the post id to find it in the database
+//      if (!isset($_POST[''])){
+//        return call('pages', 'error');
+//      }
+//      try{
+      // we use the given id to get the correct post
+      $user = User::findAll($_GET[':search']);
+//      $user = Blogger::find($id);
+      require_once('views/pages/search.php');
+      }
+
+}    
+    
