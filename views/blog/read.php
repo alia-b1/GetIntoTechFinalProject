@@ -11,7 +11,7 @@
 <?php echo "Release Year $blog->release_year" ?>
     <br>
 <img src="<?php echo $blog->movie_poster?>" alt="Movie Image" style="width:250px;height:250px;">
-
+<br>
 <a href='?controller=blog&action=delete&id=<?php echo $blog->ID; ?>'>Delete Blog Article</a> &nbsp; &nbsp;
 <br>
 <a href='?controller=blog&action=update&id=<?php echo $blog->ID; ?>'>Update Blog Article</a> &nbsp; &nbsp;

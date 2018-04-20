@@ -107,6 +107,9 @@ $deletereq->execute();
         {
           require_once('views/pages/errorUser.php');
         }
+        else {
+            require_once('views/pages/blogSuccess.php');
+        }
 }}
 /* 
  * To change this license header, choose License Headers in Project Properties.
