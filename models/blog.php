@@ -102,6 +102,14 @@ $password = $filteredPassword;
 $req->execute();
 $deletereq = $db->prepare("delete from blog WHERE user_id IS NULL");
 $deletereq->execute();
+        $count=$deletereq->rowCount();
+        if ($count > 0)
+        {
+          ('views/pages/errorUser.php');
+        }
+        else {
+           require_once('views/blog/readAll.php'); 
+        }
 }}
 
 /* 

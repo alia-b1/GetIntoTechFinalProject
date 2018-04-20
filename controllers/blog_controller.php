@@ -32,7 +32,6 @@ class BlogController {
             Blog::add();
              
             $blogs = Blog::all(); //$products is used within the view
-            require_once('views/blog/readAll.php');
       }
       
     }
