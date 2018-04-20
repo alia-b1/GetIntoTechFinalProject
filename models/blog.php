@@ -105,13 +105,9 @@ $deletereq->execute();
         $count=$deletereq->rowCount();
         if ($count > 0)
         {
-          ('views/pages/errorUser.php');
-        }
-        else {
-           require_once('views/blog/readAll.php'); 
+          require_once('views/pages/errorUser.php');
         }
 }}
-
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates

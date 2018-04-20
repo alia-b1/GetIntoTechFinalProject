@@ -32,10 +32,10 @@ class BlogController {
             Blog::add();
              
             $blogs = Blog::all(); //$products is used within the view
-      }
+            require_once('views/blog/readAll.php');
       
     }
-}
+}}
 
 /* 
  * To change this license header, choose License Headers in Project Properties.
