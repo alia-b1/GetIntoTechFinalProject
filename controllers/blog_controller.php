@@ -31,7 +31,7 @@ class BlogController {
       else { 
             Blog::add();
              
-            $blogs = Product::all(); //$products is used within the view
+            $blogs = Blog::all(); //$products is used within the view
             require_once('views/blog/readAll.php');
       }
       

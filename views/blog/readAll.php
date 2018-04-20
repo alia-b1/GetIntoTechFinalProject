@@ -1,3 +1,4 @@
+<a href="?controller=blog&action=create"><h3>Submit your own Article!</h3></a>
 <p>Here is a list of all Blog articles:</p>
 
 <?php foreach($blogs as $blog) { ?>
