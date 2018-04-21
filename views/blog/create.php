@@ -1,8 +1,22 @@
-<form action="" method="POST" class="w3-container" enctype="multipart/form-data" id="articleform">
-    
-    <h2>New Article</h2>
+<!-- Title -->
+
+<title>Submit a new article</title>
+
+<!-- Logo -->
+
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+  <div class="col-md-12 px-0">
+    <h1 class="display-4 font-italic" align="center">BLAH BLAH LAND</h1>
+  </div>
 </div>
-    <p>
+
+<!-- Header -->
+
+<h2>Submit a new article</h2>
+
+<!-- Content -->
+
+<form action="" method="POST" class="w3-container" enctype="multipart/form-data" id="articleform">
          <label>Title</label>
         <input class="w3-input" type="text" name="title" required autofocus>
     </p>
@@ -43,6 +57,7 @@ Enter text here...</textarea>
 
   <input type="file" name="myUploader" class="w3-btn w3-pink" required />
   <p>-->
+
     <input class="w3-btn w3-pink" form="articleform" type="submit" value="Add Blog Post">
   </p>
   </form>

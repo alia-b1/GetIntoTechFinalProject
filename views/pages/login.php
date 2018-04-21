@@ -1,35 +1,31 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-</head>
-<body>
-    
-<!--    <style>
-    body {
-    background-image: url("../images/standard/singingintheraincinema.jpeg");
-    background-size: 1000px;
-    background-repeat: no-repeat;
-}
-</style>-->
-</body>
+<!-- Title -->
+
+<title>Login</title>
+
+<!-- Logo -->
+
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+  <div class="col-md-12 px-0">
+    <h1 class="display-4 font-italic" align="center">BLAH BLAH LAND</h1>
+  </div>
+</div>
+
+<!-- Header -->
+
+<h2>Login</h2>
+
+<!-- Content -->
 
 <?php
-//<<<<<<< Updated upstream
-//=======
+
 if(!empty($_POST)){
 $_SESSION["email"] = $_POST['email'];
 $_SESSION["password"] = $_POST['password'];
 }
-
-//>>>>>>> Stashed changes
 ?>
+
 <div class="container py-3">
-    <h2 class="instructions">Please login</h2>
+    <h2 class="instructions"></h2>
     <form class="py-3" method="post">
         <div class="form-group">
             <label for="exampleDropdownFormEmail1">E-mail Address:</label>
@@ -51,8 +47,3 @@ $_SESSION["password"] = $_POST['password'];
     <a class="dropdown-item" href="#">New around here? Sign up</a><br><br>
     <a class="dropdown-item" href="#">Forgot password?</a>
 </div>
-        <!-- Load font awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- The social media icon bar -->
-<div class="icon-bar"></div>

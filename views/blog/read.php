@@ -1,9 +1,25 @@
+<!-- Title -->
+
+<title>About this movie</title>
+
+<!-- Logo -->
+
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+  <div class="col-md-12 px-0">
+    <h1 class="display-4 font-italic" align="center">BLAH BLAH LAND</h1>
+  </div>
+</div>
+
+<!-- Header -->
+
+<h2>About this movie</h2>
+
+<!-- Content -->
+
 <h1 class="article"> <?php echo $blog->title; ?></h1>
 <p class="container"><?php echo $blog->content; ?></p>
 <h4>Publish Date: <?php echo $blog->date_created; ?></h4>
 <br>
-<br>
-<h3> About this movie </h3>
     <?php echo "Film name: $blog->movie_title" ?>
     <br>
 <?php echo "Director: $blog->director" ?>
