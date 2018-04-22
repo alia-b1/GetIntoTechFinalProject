@@ -13,6 +13,12 @@
 <a href="?controller=blog&action=readAll">All Posts</a>
 <a href="?controller=user&action=login">Login</a>
 <a href="?controller=user&action=search">Search</a>
+ </div>
+  <br>
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-img">
+  <div class="col-md-12 px-0">
+    <h1 class="display-4 font-italic" align="center">BLAH BLAH LAND</h1>
+  </div>
  <div class="dropdown">
  <button class="dropbtn">Archive 
    <i class="fa fa-caret-down"></i>
