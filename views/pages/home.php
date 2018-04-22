@@ -1,175 +1,216 @@
-
-<!DOCTYPE html>
-<link href="../css/blog2.css" rel="stylesheet" type="text/css"/>
+<!doctype html>
 <html lang="en">
-    
-<!-- Head -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" >
-    <title>Blah Blah Land</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-</head>
-    <!-- End of Head -->
+    <title>Blog Template for Bootstrap</title>
 
-    <!-- Navigation Bar -->
-<div id="navbar">
-    <a href="home.php">Home</a>
-    <a href="about.php">About</a>
-    <a href="contact.php">Contact</a>
-    <a href="login.php">Login</a>
-    <div class="dropdown">
-        <button class="dropbtn">Archive 
-        <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-        <a href="#">April 2018</a>
-        <a href="#">March 2018</a>
-        <a href="#">February 2018</a>
-        <a href="#">January 2018</a>b
-        <a href="#">December 2017</a></div></div>
-    <div class="topnav-right">
-    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
-    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-    <a href="#" class="google"><i class="fa fa-google"></i></a> 
-    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> </div>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <div class="icon-bar">
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="blog.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="text-muted" href="#">Subscribe</a>
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-dark" href="#">Large</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="text-muted" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+            </a>
+            <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+            <a class="p-2 text-muted" href="#">Romance</a>
+          <a class="p-2 text-muted" href="#">Comedy</a>
+          <a class="p-2 text-muted" href="#">Science Fiction</a>
+          <a class="p-2 text-muted" href="#">Horror</a>
+          <a class="p-2 text-muted" href="#">Action</a>
+          <a class="p-2 text-muted" href="#">Thriller</a>
+          <a class="p-2 text-muted" href="#">Drama</a>
+          <a class="p-2 text-muted" href="#">Mystery</a>
+          <a class="p-2 text-muted" href="#">Crime</a>
+          <a class="p-2 text-muted" href="#">Animation</a>
+          <a class="p-2 text-muted" href="#">Adventure</a>
+          <a class="p-2 text-muted" href="#">Fantasy</a>
+        </nav>
+      </div>
+
+      <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 font-italic">Live long and prosper...</h1>
+          <p class="lead my-3">I am proud to call my self a Trekkie, I attend conventions, dress up and I even have "Live Long and Prosper" tattooed on my back. My family however, despite my best efforts, will watch the occasional episode but have never embraced the Star Trek world as I have. My husband took me along to the premier of Star Trek in London last night and thank you JJ you converted him in one film, I have been trying for 25 years!</p>
+          <p class="lead mb-0"><a href="?controller=blog&action=read&id=24" class="text-white font-weight-bold">Continue reading...</a></p>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary"></strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="?controller=blog&action=read&id=17">Carrey on Jim</a>
+              </h3>
+              <div class="mb-1 text-muted">Most Popular</div>
+              <p class="card-text mb-auto">Ace Ventura is the kind of comedy that stems directly from a TV show, and in this case, that show was probably In Living Color, where Carrey got most of his publicity before he became famous as a movie actor.</p>
+              <a href="?controller=blog&action=read&id=17">Continue reading</a>
+            </div>
+            <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-success">Horror</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="#">I always feel like somebody's watching me...</a>
+              </h3>
+              <div class="mb-1 text-muted"></div>
+              <p class="card-text mb-auto">Inspired by 70's and 80's horror, it follows is a refreshing psychological horror film with a simple premise and a chilling concept. The cinematography is electrifying, every shot is beautiful and the score holds brilliance, it carries a very obvious John Carpenter vibe to it...</p>
+              <a href="?controller=blog&action=read&id=33">Continue reading</a>
+            </div>
+            <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap">
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<!-- End of Navigation Bar -->
 
-<!-- Wrapping -->
-<div class="big-wrapper">
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            From the Firehose
+          </h3>
 
-<!-- Header -->
-<div class="header-cover section bg-dark-light no-padding">
-    <div class="header section" style="background-image: url(https://images.unsplash.com/photo-1510511450816-30c68106b199?ixlib=rb-0.3.5&s=b8ec5e44eabbf55182615ee0e65be14e&auto=format&fit=crop&w=1950&q=80);">
-    <div class="header-inner section-inner">
-    <div class="blog-info">
-    <h2 class="blog-title"><a href="home" rel="home">Blah Blah Land</a></h2></div></div></div>
-</div>
-<!-- End of Header -->
+          <div class="blog-post">
+            <h2 class="blog-post-title">Sample blog post</h2>
+            <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
 
-<!-- End of Wrapping -->
-</div>
-
-<!-- Wrapping -->
-<div class="wrapper section-inner">
-
-<!-- Article -->
-<div class="content left">
-    <div class="posts">
-    <div class="post-header">
-        <h1 class="post-title">Live Long and Prosper...</a></h1>
-    <div class="post-meta">
-        <span class="post-author">Alia Barakzai</a></span>
-        <span class="post-date">03-03-2018</a></span></div></div>
-    <div class="post-content">
-        <p>I am proud to call my self a Trekkie, I attend conventions, dress up and I even have "Live Long and Prosper" tattooed on my back. My family however, despite my best efforts, will watch the occasional episode but have never embraced the Star Trek world as I have. My husband took me along to the premier of Star Trek in London last night and thank you JJ you converted him in one film, I have been trying for 25 years!</p></div>
-        <div class="clear"></div><br>
-    <a href="?controller=blog&action=read&id=24" class="text-white font-weight-bold">Continue reading...</a>
-    <div class="post-meta-bottom">
-        <p class="post-tags"><a href="" rel="tag">JJ Abrams</a><a href="" rel="tag">Science Fiction</a>
-    <div class="clear"></div>
-    
-    
-<!-- End of Article -->
-
-
-
-<!-- Post Navigation -->
-    <div class="post-nav">
-        <a class="post-nav-older" title="Previous post" href="insert link to post here">
-        <h5>Previous post</h5>Insert name of earlier post here</a>
-        <a class="post-nav-newer" title="Next post:" href="insert link to post here">
-        <h5>Next post</h5>Insert name of next post here</a>
-    </div><div class="clear"></div>
-<!-- End of Post Navigation -->
-
-<!-- Comments -->
-    <div id="respond" class="comment-respond">
-        <h3 class="widget-title">Comments:</h3>
-        <form action="" method="post" id="commentform" class="comment-form">
-        <p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="5" required></textarea></p>
-        <p class="comment-form-author"><input id="author" name="author" type="text" placeholder="Name" value="" size="5" /><label for="author">Author</label> <span class="required">*</span></p>
-        <p class="comment-form-email"><input id="email" name="email" type="text" placeholder="Email" value="" size="5" /><label for="email">E-mail address:</label> <span class="required">*</span></p>
-        <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit"/>
-    </div>
-<!-- End of Comments -->
-
-    </div>
-<!-- End of Meta Tags -->
-
-    </div>
-<!-- End of Posts -->
-
-    </div>
-<!-- End of content to the left -->
-
-<!-- Sidebar -->
-<!-- Other Articles -->
-    <div class="sidebar right" role="complementary">
-    <div class="widget widget_recent_entries"><div class="widget-content">		
-            <h3 class="widget-title">Other Articles</h3>		
-            <ul>                                                                    
-            <li>                   
-                <a href="?controller=blog&action=read&id=17">Carrey On Jim</a><br>
-            <span class="post-date">03-04-2018</span>
-            </li>   
-            <li>
-                <a href="?controller=blog&action=read&id=15">Supergood, actually</a><br>
-            <span class="post-date">03-04-2018</span>
-            </li>   
-            <li>                   
-                <a href="?controller=blog&action=read&id=33">You can't sit with us...</a><br>
-            <span class="post-date">28-01-2018</span>
-            </li>                                       
-            <li>                   
-                <a href="?controller=blog&action=read&id=20">Vote for Pedro!</a><br>
-            <span class="post-date">04-12-2017</span>
-            </li>
+            <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+            <hr>
+            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <blockquote>
+              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </blockquote>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <h2>Heading</h2>
+            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <h3>Sub-heading</h3>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <pre><code>Example code block</code></pre>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+            <h3>Sub-heading</h3>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <ul>
+              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+              <li>Donec id elit non mi porta gravida at eget metus.</li>
+              <li>Nulla vitae elit libero, a pharetra augue.</li>
             </ul>
-        </div></div><div class="clear"></div>
-        
-<!-- End of other articles -->
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            <ol>
+              <li>Vestibulum id ligula porta felis euismod semper.</li>
+              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+              <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+            </ol>
+            <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+          </div><!-- /.blog-post -->
 
-<!-- Categories -->
-    <div class="widget widget_tag_cloud"><div class="widget-content"><h3 class="widget-title">Categories</h3>
-    <div class="tagcloud"><a href="Insert link to category here">Romance</a>
-    <div class="tagcloud"><a href="Insert link to category here">Comedy</a>
-    <div class="tagcloud"><a href="Insert link to category here">Science Fiction</a>
-    <div class="tagcloud"><a href="Insert link to category here">Horror</a>
-    <div class="tagcloud"><a href="Insert link to category here">Action</a>
-    <div class="tagcloud"><a href="Insert link to category here">Thriller</a>
-    <div class="tagcloud"><a href="Insert link to category here">Drama</a>
-    <div class="tagcloud"><a href="Insert link to category here">Mystery</a>
-    <div class="tagcloud"><a href="Insert link to category here">Crime</a>
-    <div class="tagcloud"><a href="Insert link to category here">Animation</a>
-    <div class="tagcloud"><a href="Insert link to category here">Adventure</a>
-    <div class="tagcloud"><a href="Insert link to category here">Fantasy</a>
+          <div class="blog-post">
+            <h2 class="blog-post-title">Another blog post</h2>
+            <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
 
-    </div></div></div></div></div></div></div></div></div></div>
-    <div class="clear"></div>
-<!-- End of Categories -->
+            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <blockquote>
+              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </blockquote>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          </div><!-- /.blog-post -->
 
-    </div>
-<!-- End of Sidebar -->
+          <div class="blog-post">
+            <h2 class="blog-post-title">New feature</h2>
+            <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
 
-    </div>
-<!-- End of Wrapper -->
-    
-    <div class="clear"></div>
-<!-- End of page -->
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <ul>
+              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+              <li>Donec id elit non mi porta gravida at eget metus.</li>
+              <li>Nulla vitae elit libero, a pharetra augue.</li>
+            </ul>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+          </div><!-- /.blog-post -->
 
-</body>
-</html>
+          <nav class="blog-pagination">
+            <a class="btn btn-outline-primary" href="#">Older</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+          </nav>
 
+        </div><!-- /.blog-main -->
 
-   
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">About</h4>
+            <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
 
+          <div class="p-3">
+            <h4 class="font-italic">Archives</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="#">March 2014</a></li>
+              <li><a href="#">February 2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
 
+          <div class="p-3">
+            <h4 class="font-italic">Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </aside><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -186,11 +227,5 @@
         text: 'Thumbnail'
       });
     </script>
-    <br>
-        <footer class="blog-footer">
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
   </body>
 </html>
