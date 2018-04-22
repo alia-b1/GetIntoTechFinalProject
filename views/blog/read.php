@@ -1,7 +1,5 @@
 <!-- Title -->
 
-<title>About this movie</title>
-
 <!-- Logo -->
 
 <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
@@ -12,7 +10,7 @@
 
 <!-- Header -->
 
-<h2>About this movie</h2>
+
 
 <!-- Content -->
 
@@ -20,6 +18,7 @@
 <p class="container"><?php echo $blog->content; ?></p>
 <h4>Publish Date: <?php echo $blog->date_created; ?></h4>
 <br>
+<h2>About this movie</h2>
     <?php echo "Film name: $blog->movie_title" ?>
     <br>
 <?php echo "Director: $blog->director" ?>
