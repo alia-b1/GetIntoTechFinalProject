@@ -12,6 +12,7 @@
 <a href="?controller=pages&action=contact">Contact</a>
 <a href="?controller=blog&action=readAll">All Posts</a>
 <a href="?controller=user&action=login">Login</a>
+<a href="?controller=user&action=register">Register</a>
 <a href="?controller=user&action=search">Search</a>
  <div class="dropdown">
  <button class="dropbtn">Archive 
