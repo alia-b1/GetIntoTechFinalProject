@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <link href="views/css/blog2.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <!-- Head -->
 <head>
 
