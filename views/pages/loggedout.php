@@ -2,27 +2,20 @@
 
 <title>Logged Out</title>
 
-<!-- Logo -->
-
-<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-  <div class="col-md-12 px-0">
-    <h1 class="display-4 font-italic" align="center">BLAH BLAH LAND</h1>
-  </div>
-</div>
-
 <!-- Header -->
 
-<h2>Logged Out</h2>
+<h2>Bye bye baby</h2>
 
 <!-- Content -->
 
-<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-  <div class="col-md-12 px-0">
-    <h1 class="display-4 font-italic" align="center">BLAH BLAH LAND</h1>
-  </div>
-</div>
+      Thanks for logging out; you'll be back!<br><br>
 
+<?php if(!empty($_SESSION)){
+    unset ($_SESSION['']);
+session_destroy();}
 
-      <h3>Bye bye baby!</h3>
+else {
 
-Thanks for logging out; you'll be back!
+    echo "<a href='login.php'>Click here to log in again</a>";}
+
+?>

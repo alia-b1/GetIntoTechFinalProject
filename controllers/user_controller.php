@@ -40,6 +40,31 @@ class UserController {
      
     }    
     
+        public function logout() {
+        if($_SERVER['REQUEST_METHOD'] == 'GET'){
+        require_once('views/pages/logout.php');
+
+     }
+    }
+      
+public function loggedout() {
+        if($_SERVER['REQUEST_METHOD'] == 'GET'){
+        require_once('views/pages/loggedout.php');    
+    if(!empty($_SESSION)){
+    unset ($_SESSION['']);
+    session_destroy();
+}
+
+if(empty($_SESSION)){
+
+echo "<a href='login.php'>Click here to log in</a>";}}}
+    
+
+      public function ErrorUser() {
+      require_once('views/pages/errorUser.php');
+      //some sort of error / catch method?
+    }
+    
     public function search() {
       // we expect a url of form ?controller=posts&action=show&id=x
       // without an id we just redirect to the error page as we need the post id to find it in the database

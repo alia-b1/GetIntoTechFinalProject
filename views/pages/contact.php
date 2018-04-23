@@ -2,32 +2,27 @@
 
 <title>Contact</title>
 
-<!-- Logo -->
-
-<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-  <div class="col-md-12 px-0">
-    <h1 class="display-4 font-italic" align="center">BLAH BLAH LAND</h1>
-  </div>
-</div>
-
 <!-- Header -->
 
-<h2>Contact Us</h2>
+<h2>You've got mail?</h2>
 
 <!-- Content -->
 
-Please contact us using the details below:<br>
+        <p>Please contact us using the details below:<br><br>
 
-<h4>Address</h4>
-The Apple Macs,<br>
-Believe in Better Building,<br>
+            <strong>Address</strong><br><br>
+        
+The Apple Macs<br>
+Believe in Better Building<br>
 Grant Way,<br>
 Isleworth,<br>
-TW7 5QD<br>
+TW7 5QD<br><br>
 
-<h4>Telephone</h4>
-0333 100 0333<br>
+<strong>Telephone</strong><br><br>
+0333 100 0333<br><br>
 
-<h4>E-mail</h4>
+<strong>E-mail</strong><br><br>
 
-<a href="mailto:theapplemacs@sky.uk">theapplemacs@sky.uk</a><br><br>
+<a href="mailto:theapplemacs@sky.uk">theapplemacs@sky.uk</a><br><br></p></div>
+        <div class="clear"></div><br>
+    <div class="clear"></div>
