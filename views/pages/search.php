@@ -2,20 +2,13 @@
 
 <title>Search</title>
 
-<!-- Logo -->
-
-<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-  <div class="col-md-12 px-0">
-    <h1 class="display-4 font-italic" align="center">BLAH BLAH LAND</h1>
-  </div>
-</div>
-
 <!-- Header -->
 
-<h2>Search</h2>
+<h2>Hello, is it me you're looking for?</h2>
 
 <!-- Content -->
 
+        <p>Please search the site using the search box below:</p><br>
             <form action="?controller=user&action=search" method="post">
                 <div class="form-row">
 <!--                    <div class="col-sm-6 mb-3">-->

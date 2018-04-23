@@ -2,19 +2,13 @@
 
 <title>Register</title>
 
-<!-- Logo -->
-
-<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-  <div class="col-md-12 px-0">
-    <h1 class="display-4 font-italic" align="center">BLAH BLAH LAND</h1>
-  </div>
-</div>
-
 <!-- Header -->
 
-<h2>Register</h2>
+<h2>Tell us a bit about yourself...</h2>
 
 <!-- Content -->
+
+        <p>Please register to use the site by completing the fields below:</p><br>
 
 <div class="container py-3">
     <form method="post">
