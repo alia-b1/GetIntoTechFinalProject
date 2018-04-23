@@ -47,8 +47,13 @@ class UserController {
      require_once ('views/pages/search.php');
      }
      else {
+         require_once('views/user/search.php');
          $searchResults = User::findAll($_POST['search']);
          return $searchResults;
+
+//         foreach ($searchResults as $searchResult) {
+//           echo "Result: $searchResult";  
+//         }
      }
     }
 }
