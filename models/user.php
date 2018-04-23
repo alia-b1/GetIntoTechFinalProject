@@ -84,24 +84,30 @@ class User {
             public static function findAll($search) { 
       $db = Db::getInstance(); 
       //use intval to make sure $id is an integer 
-      $req = $db->prepare('SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
-                    . "INNER JOIN movie ON blog.movie_id=movie.ID "
-                    . "INNER JOIN blog_user ON blog.user_id=blog_user.ID "
-                    . "WHERE blog.title LIKE :search UNION SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
-                    .  "INNER JOIN movie ON blog.movie_id=movie.ID "
-                    . "INNER JOIN blog_user ON blog.user_id=blog_user.ID "
-                    . "WHERE movie.movie_title LIKE :search UNION SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
-                    . "INNER JOIN movie ON blog.movie_id=movie.ID "
-                    . "INNER JOIN blog_user ON blog.user_id=blog_user.ID "'); 
+      $req = $db->prepare( 'CALL search_blog (:search)');
+//              'SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
+//                    . "INNER JOIN movie ON blog.movie_id=movie.ID "
+//                    . "INNER JOIN blog_user ON blog.user_id=blog_user.ID "
+//                    . "WHERE blog.title LIKE :search UNION SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
+//                    .  "INNER JOIN movie ON blog.movie_id=movie.ID "
+//                    . "INNER JOIN blog_user ON blog.user_id=blog_user.ID "
+//                    . "WHERE movie.movie_title LIKE :search UNION SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog "
+//                    . "INNER JOIN movie ON blog.movie_id=movie.ID "
+//                    . "INNER JOIN blog_user ON blog.user_id=blog_user.ID "'); 
       //the query was prepared, now replace :id with the actual $id value 
-      $req->execute(['search'=>"%".$search."%"]);  
-
-        while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
-                echo '<tr><th>' . $row["title"] . "</th><td>" . $row["first_name"] . " ". $row["last_name"] . "</td><td> Created on " . $row["date_created"] . "</td><td> Content: " . $row["content"] . "</td></tr>";
-            } 
-    { 
-        //replace with a more meaningful exception 
-        throw new Exception('A real exception should go here'); 
-    } 
-    } 
+      $req->bindParam(':search', $search);
+      try {
+          if($search && $search !=""){
+              $filteredSearch = filter_input(INPUT_POST,'search', FILTER_SANITIZE_SPECIAL_CHARS);
+          }
+      } catch (PDOException $e) {
+            die("Could not signup ....." . $e->getMessage());
+        }
+        unset($stmt);
+    }
+//    { 
+//        //replace with a more meaningful exception 
+//        throw new Exception('A real exception should go here'); 
+//    } 
+//    } 
 }

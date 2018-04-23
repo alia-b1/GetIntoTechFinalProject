@@ -16,7 +16,7 @@
 
 <!-- Content -->
 
-            <form action="#" method="post">
+            <form action="?controller=user&action=search" method="post">
                 <div class="form-row">
                     <div class="col-sm-6 mb-3">
                         <label for="validationServer01">Search all articles:</label>

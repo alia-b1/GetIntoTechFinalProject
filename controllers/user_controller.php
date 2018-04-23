@@ -48,7 +48,9 @@ class UserController {
      }
      else {
          $searchResults = User::findAll($_POST['search']);
-         return $searchResults;
+         foreach ($searchResults as $searchResult) {
+           echo $searchResult;  
+         }
      }
     }
 }
