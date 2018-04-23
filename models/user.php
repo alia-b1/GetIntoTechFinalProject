@@ -102,13 +102,13 @@ class User {
           }
           $search=$filteredSearch;
           $req->execute(['search'=>"%".$filteredSearch."%"]);
-//          foreach($req->fetchAll() as $blog) {
+//          foreach($req->fetchAll() as $searchResults) {
 //        $list[] = new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster']);
 //      }
 //      return $list;
 //    }
           while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
-                echo '<tr><th>' . $row["title"] .$row["movie_title"] . "</th><td>" . $row["first_name"] . "  ". $row["last_name"] . "</td><td> Published on " . $row["date_created"] . "</td><td> Content: " . $row["content"] . "</td></tr>";
+                echo '<tr><th>' . $row["title"] .$row["movie_title"] . "</th><td>" . $row["first_name"] . "  ". $row["last_name"] . "</td><td> Published on " . $row["date_created"] . "</td><td> Content: " . $row["content"] . "</td></tr>"."<br>";
             }
       } catch (PDOException $e) {
             die("Could not complete the search ....." . $e->getMessage());
