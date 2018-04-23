@@ -100,10 +100,20 @@ class User {
           if($search && $search !=""){
               $filteredSearch = filter_input(INPUT_POST,'search', FILTER_SANITIZE_SPECIAL_CHARS);
           }
+          $search=$filteredSearch;
+          $req->execute(['search'=>"%".$filteredSearch."%"]);
+//          foreach($req->fetchAll() as $blog) {
+//        $list[] = new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster']);
+//      }
+//      return $list;
+//    }
+          while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
+                echo '<tr><th>' . $row["title"] .$row["movie_title"] . "</th><td>" . $row["first_name"] . "  ". $row["last_name"] . "</td><td> Published on " . $row["date_created"] . "</td><td> Content: " . $row["content"] . "</td></tr>";
+            }
       } catch (PDOException $e) {
-            die("Could not signup ....." . $e->getMessage());
+            die("Could not complete the search ....." . $e->getMessage());
         }
-        unset($stmt);
+        unset($search);
     }
 //    { 
 //        //replace with a more meaningful exception 
