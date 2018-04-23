@@ -8,9 +8,11 @@
     font-style: normal;
 }
 
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
 html, body { margin:0; padding:0; 	font-family: 'Lato', sans-serif; }
 
-h1, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, small, strike, sub, sup, li, ol, ul, fieldset, form, label, legend, button, table, caption, tr, th, td {
+h1,a h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, small, strike, sub, sup, li, ol, ul, fieldset, form, label, legend, button, table, caption, tr, th, td {
 	margin:0;
 	padding:0;
 	border:0;
