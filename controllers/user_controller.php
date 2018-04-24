@@ -40,7 +40,29 @@ class UserController {
      
     }    
     
-   
+        public function logout() {
+        if($_SERVER['REQUEST_METHOD'] == 'GET'){
+        require_once('views/pages/logout.php');
+
+     }
+    }
+public function loggedout() {
+      
+        if($_SERVER['REQUEST_METHOD'] == 'GET'){
+        require_once('views/pages/loggedout.php');    
+    if(!empty($_SESSION)){
+    unset ($_SESSION['']);
+    session_destroy();
+}
+      public function ErrorUser() {
+      //some sort of error / catch method?
+      require_once('views/pages/errorUser.php');
+    }
+if(empty($_SESSION)){
+echo "<a href='login.php'>Click here to log in</a>";}}}
+
+
+    
 }
 ////        if (!isset($_POST['search'])){
 ////          require_once('views/pages/search.php');
