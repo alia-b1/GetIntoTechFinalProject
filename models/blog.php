@@ -4,8 +4,8 @@ class Blog {
   public $title;
   public $dateCreated;
   protected $user_ID;
-  protected $blog_user_first_name;
-  protected $blog_user_last_name;
+  public $blog_user_first_name;
+  public $blog_user_last_name;
   public $category;
   public $content;
   public $movie_title;

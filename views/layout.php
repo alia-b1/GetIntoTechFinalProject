@@ -67,6 +67,31 @@
                     <!-- Sidebar -->
                     <!-- Other Articles -->
                     <div class="sidebar" role="complementary">
+                        <!-- Categories -->
+                        <div class="widget widget_tag_cloud mb-2">
+                            <div class="widget-content">
+                                <h3 class="widget-title">Categories</h3>
+                                <div class="tagcloud"><a href="Insert link to category here">Romance</a></div>
+                                <div class="tagcloud"><a href="Insert link to category here">Comedy</a></div>
+                                <div class="tagcloud"><a href="Insert link to category here">Science Fiction</a></div>
+                                <div class="tagcloud"><a href="Insert link to category here">Horror</a></div>
+                                <div class="tagcloud"><a href="Insert link to category here">Action</a></div>
+                                <div class="tagcloud"><a href="Insert link to category here">Thriller</a></div>
+                                <div class="tagcloud"><a href="Insert link to category here">Drama</a></div>
+                                <div class="tagcloud"><a href="Insert link to category here">Mystery</a></div>
+                                <div class="tagcloud"><a href="Insert link to category here">Crime</a></div>
+                                <div class="tagcloud"><a href="Insert link to category here">Animation</a></div>
+                                <div class="tagcloud"><a href="Insert link to category here">Adventure</a></div>
+                                <div class="tagcloud"><a href="Insert link to category here">Fantasy</a></div>
+                            </div>
+                        </div>
+                        <!-- End of Categories -->
+                        <div class="widget pt-5"> 
+                            <div class="widget-content">
+                                <h3 class="widget-title">Mood Music</h3>
+                                <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXb69UWhjrXsW" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                        </div>
                         <div class="widget widget_recent_entries">
                             <div class="widget-content"><br>		
                                 <h3 class="widget-title">Other Articles</h3>		
@@ -94,31 +119,6 @@
 
                         <!-- End of other articles -->
                         
-                        <!-- Categories -->
-                        <div class="widget widget_tag_cloud">
-                            <div class="widget-content"><h3 class="widget-title">Categories</h3>
-                                <div class="tagcloud"><a href="Insert link to category here">Romance</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Comedy</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Science Fiction</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Horror</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Action</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Thriller</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Drama</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Mystery</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Crime</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Animation</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Adventure</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Fantasy</a></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <!-- End of Categories -->
-                        <div class="widget">
-                            <div class="widget-content"><h3 class="widget-title">Mood Music</h3>
-                                <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXb69UWhjrXsW" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                       
-                            </div>
-                        </div>
                     </div>
                     <!-- End of Sidebar -->
                 </div>

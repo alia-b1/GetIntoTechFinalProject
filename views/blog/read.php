@@ -1,18 +1,35 @@
 
 <!-- Content -->
+<div class="row">
+    <div class="col-sm-12 col-md-5">
+        <img src="<?php echo $blog->movie_poster?>" alt="Movie Image" style="height:300px;">
+    </div>
+    <div class="col-md-7">
+      <h2 class="text-dark"> <?php echo $blog->title; ?></h2>
+      <div>Written by <a href="/">@<?php echo $blog->blog_user_first_name . '' . $blog->blog_user_last_name ?></a></div>
+      <div class="text-secondary">(<?php echo $blog->date_created; ?>)</div>
+      <table class="table mt-4">
+          <tbody>
+              <tr>
+                  <th scope="row">Film name:</th>
+                  <th><?php echo $blog->movie_title ?></th>
+              </tr>
+              <tr>
+                  <th scope="row">Director:</th>
+                  <th><?php echo $blog->director ?></th>
+              </tr>
+              <tr>
+                  <th scope="row">Release Year:</th>
+                  <th><?php echo $blog->release_year ?></th>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+</div>
+<div class="row mt-5">
+    <p class="container"><?php echo $blog->content; ?></p>
+</div>
 
-<h1 class="article"> <?php echo $blog->title; ?></h1>
-<p class="container"><?php echo $blog->content; ?></p>
-<h4>Publish Date: <?php echo $blog->date_created; ?></h4>
-<br>
-<h2>About this movie</h2>
-    <?php echo "Film name: $blog->movie_title" ?>
-    <br>
-<?php echo "Director: $blog->director" ?>
-    <br>
-<?php echo "Release Year $blog->release_year" ?>
-    <br>
-<img src="<?php echo $blog->movie_poster?>" alt="Movie Image" style="width:250px;height:250px;">
 <br>
 <a href='?controller=blog&action=delete&id=<?php echo $blog->ID; ?>'>Delete Blog Article</a> &nbsp; &nbsp;
 <br>
