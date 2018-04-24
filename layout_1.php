@@ -14,12 +14,12 @@
 
     <!-- Navigation Bar -->
 <div id="navbar">
-    <a href="http://localhost/GetIntoTechFinalProject/index.php?controller=pages&action=home">Home</a>
-    <a href="http://localhost/GetIntoTechFinalProject/index.php?controller=pages&action=about">About</a>
-    <a href="http://localhost/GetIntoTechFinalProject/index.php?controller=pages&action=contact">Contact</a>
-    <a href="http://localhost/GetIntoTechFinalProject/index.php?controller=user&action=login">Login</a>
-    <a href="http://localhost/GetIntoTechFinalProject/index.php?controller=blog&action=readAll">All Posts</a>
-    <a href="http://localhost/GetIntoTechFinalProject/index.php?controller=user&action=search">Search</a>
+    <a href="?controller=pages&action=home">Home</a>
+    <a href="?controller=pages&action=about">About</a>
+    <a href="?controller=pages&action=contact">Contact</a>
+    <a href="?controller=user&action=login">Login</a>
+    <a href="?controller=blog&action=readAll">All Posts</a>
+    <a href="?controller=user&action=search">Search</a>
     <div class="dropdown">
         <button class="dropbtn">Archive 
         <i class="fa fa-caret-down"></i>
@@ -50,7 +50,7 @@
     <div class="header section" style="background-image: url(https://images.unsplash.com/photo-1510511450816-30c68106b199?ixlib=rb-0.3.5&s=b8ec5e44eabbf55182615ee0e65be14e&auto=format&fit=crop&w=1950&q=80);">
     <div class="header-inner section-inner">
     <div class="blog-info">
-    <h2 class="blog-title"><a href="http://localhost/GetIntoTechFinalProject/index.php?controller=pages&action=home" rel="home">Blah Blah Land</a></h2></div></div></div>
+    <h2 class="blog-title"><a href="?controller=pages&action=home" rel="home">Blah Blah Land</a></h2></div></div></div>
 </div>
 <!-- End of Header -->
 
