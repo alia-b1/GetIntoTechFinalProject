@@ -16,7 +16,7 @@
         $action     = 'home';
   }
 
-    require_once('layout_1.php');
+    require_once('views/layout.php');
         ?>
     </body>
 </html>

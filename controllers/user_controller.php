@@ -1,96 +1,55 @@
 <?php
-
 class UserController {
     public function login() {
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
-          require_once('views/pages/login.php');
+            require_once('views/pages/login.php');
+        } else { 
+            if (!isset($_POST['email']) || !isset($_POST['password'])){
+                return call('pages', 'error');
+            }
           
-      }
-      else { 
-          
-          if (!isset($_POST['email']) || !isset($_POST['password'])){
-              return call('pages', 'error');
-          }
-          
-           $user = User::loginUser($_POST['email'], $_POST['password']);
+            $user = User::loginUser($_POST['email'], $_POST['password']);
             $first_name=$user->first_name;
             $last_name = $user->last_name;
 
             require_once('views/pages/home.php');
-      }
-     
+        }
     }
 
     public function register() {
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
-          require_once('views/pages/register.php');
+            require_once('views/pages/register.php');  
+        } else { 
+            if (!isset($_POST['email']) || !isset($_POST['password']) || !isset($_POST['first_name']) || !isset($_POST['last_name']) || !isset($_POST['dob'])){
+                return call('pages', 'error');
+            }
           
-      }
-      else { 
-          if (!isset($_POST['email']) || !isset($_POST['password']) || !isset($_POST['first_name']) || !isset($_POST['last_name']) || !isset($_POST['dob'])){
-              return call('pages', 'error');
-          }
-          
-           $user = User::register($_POST['email'], $_POST['password'], $_POST['first_name'],$_POST['last_name'],$_POST['dob']);
+            $user = User::register($_POST['email'], $_POST['password'], $_POST['first_name'],$_POST['last_name'],$_POST['dob']);
             $first_name=$user->first_name;
             $last_name = $user->last_name;
 
             require_once('views/pages/home.php');
-      }
-     
+        }
     }    
     
-        public function logout() {
+    public function logout() {
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
-        require_once('views/pages/logout.php');
-
-     }
+            require_once('views/pages/logout.php');
+        }
     }
-      
-public function loggedout() {
+
+    public function loggedout() {  
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
-        require_once('views/pages/loggedout.php');    
-    if(!empty($_SESSION)){
-    unset ($_SESSION['']);
-    session_destroy();
-}
-
-if(empty($_SESSION)){
-
-echo "<a href='login.php'>Click here to log in</a>";}}}
+            require_once('views/pages/loggedout.php');    
+            if(!empty($_SESSION)){
+                unset ($_SESSION['']);
+                session_destroy();
+            }
+        }
+    }
     
-
-      public function ErrorUser() {
-      require_once('views/pages/errorUser.php');
+    public function ErrorUser() {
       //some sort of error / catch method?
-    }
-    
-    public function search() {
-      // we expect a url of form ?controller=posts&action=show&id=x
-      // without an id we just redirect to the error page as we need the post id to find it in the database
-     if ($_SERVER['REQUEST_METHOD'] === 'GET'){
-     require_once ('views/pages/search.php');
-     }
-     else {
-         require_once('views/user/search.php');
-         $searchResults = User::findAll($_POST['search']);
-         return $searchResults;
-
-//         foreach ($searchResults as $searchResult) {
-//           echo "Result: $searchResult";  
-//         }
-     }
+        require_once('views/pages/errorUser.php');
     }
 }
-////        if (!isset($_POST['search'])){
-////          require_once('views/pages/search.php');
-////      }
-//        return call('pages', 'error');
-//      }
-//      try{
-//      // we use the given id to get the correct post
-//      $user = User::findAll($_POST['search']);
-////      $user = Blogger::find($id);
-//      require_once('views/pages/search.php');
-//      }
-//      

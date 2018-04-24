@@ -36,6 +36,6 @@ $_SESSION["password"] = $_POST['password'];
         <button type="submit" class="btn btn-primary">Sign in</button><br><br>
     </form>
     <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">New around here? Sign up</a><br><br>
+    <a class="dropdown-item" href="?controller=user&action=register">New around here? Sign up</a><br><br>
     <a class="dropdown-item" href="#">Forgot password?</a>
 </div>

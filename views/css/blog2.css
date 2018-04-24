@@ -66,9 +66,6 @@ img {
 }
 
 .hidden { display: none; }
-.clear { clear: both; }
-.left { float: left; }
-.right { float: right; }
 
 ::selection {
 	background: #cc0052;
@@ -128,11 +125,8 @@ body a,
 
 .wrapper { 	margin-top: 100px; }
 
-.content { width: 65%; }
 .content.center { margin-left: auto; margin-right: auto; }
 .content.full-width { width: 100%; }
-
-.sidebar { width: 27.5%; }
 
 /* Style the navbar */
 #navbar {
