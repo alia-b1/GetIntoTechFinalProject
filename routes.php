@@ -25,8 +25,8 @@
 // for validation we list the allowed controllers and their actions
 // Add an entry for each new controller and its actions
 $controllers = array('pages' => ['home', 'error', 'about', 'contact'],
-                    'user' => ['login', 'register', 'search', 'errorUser', 'loggedout'],
-                     'blog' => ['readAll','read', 'create', 'blogSuccess'],
+                    'user' => ['login', 'register', 'errorUser', 'loggedout'],
+                     'blog' => ['readAll','read', 'create', 'blogSuccess', 'search'],
                     );
 
   // check that the requested controller and action are both allowed
