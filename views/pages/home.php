@@ -17,7 +17,7 @@
         
         <br>
     
-        <a href="?controller=blog&action=read&id=24" class="text-white font-weight-bold">Continue reading...</a>
+        <a href="?controller=blog&action=read&id=24" class="font-weight-bold">Continue reading...</a>
     
         <div class="post-meta-bottom">
             <p class="post-tags">

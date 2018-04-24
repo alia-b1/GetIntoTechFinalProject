@@ -493,14 +493,11 @@ COMMIT;
 DELIMITER //
 CREATE PROCEDURE search_blog(IN search varchar(30))
 BEGIN
-SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog 
+SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster 
+FROM blog 
 INNER JOIN movie ON blog.movie_id=movie.ID 
 INNER JOIN blog_user ON blog.user_id=blog_user.ID 
-WHERE blog.title LIKE search UNION SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog 
-INNER JOIN movie ON blog.movie_id=movie.ID 
-INNER JOIN blog_user ON blog.user_id=blog_user.ID
-WHERE movie.movie_title LIKE search UNION SELECT blog.title, blog.date_created, movie.movie_title, blog_user.first_name, blog_user.last_name ,blog.content FROM blog
-INNER JOIN movie ON blog.movie_id=movie.ID 
-INNER JOIN blog_user ON blog.user_id=blog_user.ID; 
+WHERE blog.title LIKE search
+AND movie.movie_title LIKE search;
 END //
 DELIMITER ;
