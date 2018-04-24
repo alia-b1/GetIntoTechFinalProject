@@ -93,7 +93,7 @@
                         <div class="clear"></div>
 
                         <!-- End of other articles -->
-
+                        
                         <!-- Categories -->
                         <div class="widget widget_tag_cloud">
                             <div class="widget-content"><h3 class="widget-title">Categories</h3>
@@ -113,6 +113,10 @@
                             <div class="clear"></div>
                         </div>
                         <!-- End of Categories -->
+                        <div class="widget">
+                            <div class="widget-content"><h3 class="widget-title">Mood Music</h3>
+                                <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXb69UWhjrXsW" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>
                     </div>
                     <!-- End of Sidebar -->
                 </div>
@@ -129,6 +133,7 @@
                     </p>
                 </footer>
             </div>
+        </div>
         </div>
         
         <!-- Bootstrap core JavaScript
