@@ -135,4 +135,19 @@ class Blog {
 
     unset($search);
   }
+  public static function searchCategory($categoryid){
+    $list = [];
+    $db = Db::getInstance();
+    $req = $db->prepare('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id INNER JOIN category on movie.category_ID = category.id WHERE category.id = :categoryid');
+    // we create a list of Product objects from the database results
+    $req->bindParam(':categoryid', $categoryid);
+    $req->execute();
+    
+    foreach($req->fetchAll() as $blog) {
+      $list[] = new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster']);
+    }
+    return $list;
+  }
+    
 }
+

@@ -71,18 +71,18 @@
                         <div class="widget widget_tag_cloud mb-2">
                             <div class="widget-content">
                                 <h3 class="widget-title">Categories</h3>
-                                <div class="tagcloud"><a href="Insert link to category here">Romance</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Comedy</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Science Fiction</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Horror</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Action</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Thriller</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Drama</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Mystery</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Crime</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Animation</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Adventure</a></div>
-                                <div class="tagcloud"><a href="Insert link to category here">Fantasy</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=1">Romance</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=2">Comedy</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=3">Science Fiction</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=4">Horror</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=5">Action</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=6">Thriller</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=7">Drama</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=8">Mystery</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=9">Crime</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=10">Animation</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=11">Adventure</a></div>
+                                <div class="tagcloud"><a href="?controller=blog&action=category&categoryid=12">Fantasy</a></div>
                             </div>
                         </div>
                         <!-- End of Categories -->
