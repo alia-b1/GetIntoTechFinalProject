@@ -1,18 +1,18 @@
 
 <!-- Content -->
 
-<h1 class="article"> <?php echo $blog->title; ?></h1>
-<p class="container"><?php echo $blog->content; ?></p>
-<h4>Publish Date: <?php echo $blog->date_created; ?></h4>
+<h2 class="article"> <?php echo $blog->title; ?></h2>
+<p class="container"><?php echo $blog->content; ?></p><br>
+<strong><h4>Publish Date:</strong> <?php echo $blog->date_created; ?></h4>
 <br>
 <h2>About this movie</h2>
-    <?php echo "Film name: $blog->movie_title" ?>
+<strong><?php echo "Film name:</strong> $blog->movie_title" ?>
     <br>
-<?php echo "Director: $blog->director" ?>
+<strong><?php echo "Director:</strong> $blog->director" ?>
     <br>
-<?php echo "Release Year $blog->release_year" ?>
-    <br>
-<img src="<?php echo $blog->movie_poster?>" alt="Movie Image" style="width:250px;height:250px;">
+<strong><?php echo "Release Year:</strong> $blog->release_year" ?>
+    <br><br>
+<img src="<?php echo $blog->movie_poster?>" alt="Movie Image">
 <br>
 <a href='?controller=blog&action=delete&id=<?php echo $blog->ID; ?>'>Delete Blog Article</a> &nbsp; &nbsp;
 <br>
