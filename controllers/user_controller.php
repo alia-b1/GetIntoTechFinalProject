@@ -40,22 +40,7 @@ class UserController {
      
     }    
     
-    public function search() {
-      // we expect a url of form ?controller=posts&action=show&id=x
-      // without an id we just redirect to the error page as we need the post id to find it in the database
-     if ($_SERVER['REQUEST_METHOD'] === 'GET'){
-     require_once ('views/pages/search.php');
-     }
-     else {
-         $searchResults = User::findAll($_POST['search']);
-         require_once('views/user/search.php');
-         return $searchResults;
-
-//         foreach ($searchResults as $searchResult) {
-//           echo "Result: $searchResult";  
-//         }
-     }
-    }
+   
 }
 ////        if (!isset($_POST['search'])){
 ////          require_once('views/pages/search.php');
