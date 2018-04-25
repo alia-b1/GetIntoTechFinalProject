@@ -3,11 +3,16 @@
 <title>Home</title>
 
 <div class="content">
+    <?php 
+    if (isset($first_name)) { 
+        echo '<p>Hello there ' . $first_name . ' ' . $last_name . '!<p>'; 
+    } 
+    ?>
     <div class="posts">
         <div class="post-header">
             <h1 class="post-title">Live Long and Prosper...</a></h1>
             <div class="post-meta">
-                <span class="post-author">Alia Barakzai</a></span>
+                <span class="post-author"><a href='?controller=blog&action=user&userid=2'>@AliaBarakzai</a></span>
                 <span class="post-date">03-03-2018</a></span>
             </div>
         </div>
