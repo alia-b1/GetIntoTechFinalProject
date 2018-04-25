@@ -63,6 +63,21 @@ class BlogController {
       }
 
 }
+public function movie() {
+      // we expect a url of form ?controller=products&action=create
+      // if it's a GET request display a blank form for creating a new product
+      // else it's a POST so add to the database and redirect to readAll action
+      if ($_SERVER['REQUEST_METHOD'] === 'GET'){
+          $blogs = Blog::searchMovie($_GET['movieid']);
+     require_once ('views/blog/movie.php');
+     }
+     else {
+         
+         require_once('views/pages/error.php');
+      
+      }
+
+}
 }
 
 /* 

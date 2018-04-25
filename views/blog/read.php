@@ -31,6 +31,8 @@
 </div>
 
 <br>
+<a href='?controller=blog&action=movie&movieid=<?php echo $blog->movie_id; ?>'><h2>Click here for more articles about this film!</h2></a> &nbsp; &nbsp;
+<br>
 <a href='?controller=blog&action=delete&id=<?php echo $blog->ID; ?>'>Delete Blog Article</a> &nbsp; &nbsp;
 <br>
 <a href='?controller=blog&action=update&id=<?php echo $blog->ID; ?>'>Update Blog Article</a> &nbsp; &nbsp;
