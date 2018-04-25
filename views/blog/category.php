@@ -1,10 +1,6 @@
-<h2>Here is a list of all Blog articles in this Category:</h2>
+<h2><?php echo count($blogs) ?> Posts in <a href='#'><?php echo $category ?></a> Category:</h2>
 <br>
-<?php foreach($blogs as $blog) { ?>
-  <p>
-    <?php echo $blog->title; ?> &nbsp; &nbsp;
-    <a href='?controller=blog&action=read&id=<?php echo $blog->ID; ?>'>See Blog article</a> &nbsp; &nbsp;
-<!--    <a href='?controller=product&action=delete&id=<?php echo $blog->ID; ?>'>Delete article</a> &nbsp; &nbsp;
-    <a href='?controller=product&action=update&id=<?php echo $blog->ID; ?>'>Update article</a> &nbsp;-->
-  </p>
-<?php } ?>
+
+<?php
+    require_once('views/blog/blogsList.php');
+?>

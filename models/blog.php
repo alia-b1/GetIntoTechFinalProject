@@ -3,7 +3,7 @@ class Blog {
   public $ID;
   public $title;
   public $dateCreated;
-  protected $user_ID;
+  public $user_id;
   public $blog_user_first_name;
   public $blog_user_last_name;
   public $movie_id;
@@ -12,9 +12,11 @@ class Blog {
   public $release_year;
   public $director;
   public $movie_poster;
+  public $category;
+  public $category_id;
   
 
-  public function __construct($ID, $title, $date_created, $user_id, $user_first_name, $user_last_name, $movie_id, $content, $movie_title, $release_year, $director, $movie_poster) {
+  public function __construct($ID, $title, $date_created, $user_id, $user_first_name, $user_last_name, $movie_id, $content, $movie_title, $release_year, $director, $movie_poster, $category, $category_id) {
     $this->ID= $ID;
     $this->title = $title;
     $this->date_created  = $date_created;
@@ -27,15 +29,17 @@ class Blog {
     $this->release_year = $release_year;
     $this->director = $director;
     $this->movie_poster = $movie_poster;
+    $this->category = $category;
+    $this->category_id = $category_id;
   }
 
   public static function all() {
     $list = [];
     $db = Db::getInstance();
-    $req = $db->query('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id WHERE blog.id >100;');
+    $req = $db->query('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster, category.category, category.ID as category_id FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id INNER JOIN category on movie.category_ID = category.id;');
     // we create a list of Product objects from the database results
     foreach($req->fetchAll() as $blog) {
-      $list[] = new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster']);
+      $list[] = new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster'], $blog['category'], $blog['category_id']);
     }
     return $list;
   }
@@ -44,13 +48,13 @@ class Blog {
     $db = Db::getInstance();
     //use intval to make sure $id is an integer
     $ID = intval($ID);
-    $req = $db->prepare("SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id WHERE blog.ID = :ID");
+    $req = $db->prepare("SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster, category.category, category.ID as category_id FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id INNER JOIN category on movie.category_ID = category.id WHERE blog.ID = :ID");
     //the query was prepared, now replace :id with the actual $id value
     $req->execute(array('ID' => $ID));
     $blog = $req->fetch();
 
     if($blog){
-      return new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster']);
+      return new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster'], $blog['category'], $blog['category_id']);
     } else {
       //replace with a more meaningful exception
       //re-direct to an error page
@@ -126,10 +130,14 @@ class Blog {
       $req->execute(['search'=>"%".$filteredSearch."%"]);
 
       foreach($req->fetchAll() as $blog) {
-        $list[] = new Blog($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster']);
+        $list[] = new Blog($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster'], $blog['category'], $blog['category_id']);
       }
       
-      return $list;
+      if (isset($list)) {
+            return $list;
+      } else {
+          return [];
+      }
     } catch (PDOException $e) {
         $count=$req->rowCount();
         if ($count <0) {
@@ -142,16 +150,31 @@ class Blog {
 
     unset($search);
   }
+  
   public static function searchCategory($categoryid){
     $list = [];
     $db = Db::getInstance();
-    $req = $db->prepare('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id INNER JOIN category on movie.category_ID = category.id WHERE category.id = :categoryid');
+    $req = $db->prepare('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster, category.category, category.ID as category_id FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id INNER JOIN category on movie.category_ID = category.id WHERE category.id = :categoryid');
     // we create a list of Product objects from the database results
     $req->bindParam(':categoryid', $categoryid);
     $req->execute();
     
     foreach($req->fetchAll() as $blog) {
-      $list[] = new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster']);
+      $list[] = new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster'], $blog['category'], $blog['category_id']);
+    }
+    return $list;
+  }
+  
+  public static function searchUser($userid){
+    $list = [];
+    $db = Db::getInstance();
+    $req = $db->prepare('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster, category.category, category.ID as category_id FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id INNER JOIN category on movie.category_ID = category.id WHERE blog_user.id = :userid');
+    // we create a list of Product objects from the database results
+    $req->bindParam(':userid', $userid);
+    $req->execute();
+    
+    foreach($req->fetchAll() as $blog) {
+      $list[] = new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster'], $blog['category'], $blog['category_id']);
     }
     return $list;
   }
@@ -159,13 +182,13 @@ class Blog {
   public static function searchMovie($movieid){
     $list = [];
     $db = Db::getInstance();
-    $req = $db->prepare('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id WHERE movie.ID = :movieid');
+    $req = $db->prepare('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster, category.category, category.ID as category_id FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id WHERE movie.ID = :movieid');
     // we create a list of Product objects from the database results
     $req->bindParam(':movieid', $movieid);
     $req->execute();
     
     foreach($req->fetchAll() as $blog) {
-      $list[] = new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster']);
+      $list[] = new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster'], $blog['category'], $blog['category_id']);
     }
     return $list;
   }

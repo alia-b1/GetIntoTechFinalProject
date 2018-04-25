@@ -7,7 +7,7 @@ class BlogController {
      require_once ('views/pages/search.php');
      }
      else {
-         $searchResults = Blog::search($_POST['search']);
+         $blogs = Blog::search($_POST['search']);
          require_once('views/blog/search.php');
      }
     }
@@ -37,33 +37,44 @@ class BlogController {
       // we expect a url of form ?controller=products&action=create
       // if it's a GET request display a blank form for creating a new product
       // else it's a POST so add to the database and redirect to readAll action
-      if($_SERVER['REQUEST_METHOD'] == 'GET'){
-          require_once('views/blog/create.php');
-      }
-      else { 
+        if($_SERVER['REQUEST_METHOD'] == 'GET'){
+            require_once('views/blog/create.php');
+        } else { 
             Blog::add();
              
             $blogs = Blog::all(); //$products is used within the view
             require_once('views/blog/readAll.php');
-      
+        }
     }
-    }
+    
     public function category() {
-      // we expect a url of form ?controller=products&action=create
-      // if it's a GET request display a blank form for creating a new product
-      // else it's a POST so add to the database and redirect to readAll action
-      if ($_SERVER['REQUEST_METHOD'] === 'GET'){
-          $blogs = Blog::searchCategory($_GET['categoryid']);
-     require_once ('views/blog/category.php');
-     }
-     else {
-         
-         require_once('views/pages/error.php');
-      
-      }
-
-}
-public function movie() {
+        // we expect a url of form ?controller=products&action=create
+        // if it's a GET request display a blank form for creating a new product
+        // else it's a POST so add to the database and redirect to readAll action
+        if ($_SERVER['REQUEST_METHOD'] === 'GET'){
+            $blogs = Blog::searchCategory($_GET['categoryid']);
+            $category = $blogs[0]->category;
+            require_once ('views/blog/category.php');
+        } else {
+            require_once('views/pages/error.php');
+        }
+    }
+    
+    public function user() {
+        // we expect a url of form ?controller=products&action=create
+        // if it's a GET request display a blank form for creating a new product
+        // else it's a POST so add to the database and redirect to readAll action
+        if ($_SERVER['REQUEST_METHOD'] === 'GET'){
+            $blogs = Blog::searchUser($_GET['userid']);
+            $userFirstName = $blogs[0]->blog_user_first_name;
+            $userLastName = $blogs[0]->blog_user_last_name;
+            require_once ('views/blog/user.php');
+        } else {
+            require_once('views/pages/error.php');
+        }
+    }
+    
+    public function movie() {
       // we expect a url of form ?controller=products&action=create
       // if it's a GET request display a blank form for creating a new product
       // else it's a POST so add to the database and redirect to readAll action
@@ -77,7 +88,7 @@ public function movie() {
       
       }
 
-}
+    }
 }
 
 /* 

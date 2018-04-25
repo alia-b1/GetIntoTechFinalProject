@@ -5,8 +5,8 @@
         <img src="<?php echo $blog->movie_poster?>" alt="Movie Image" style="height:300px;">
     </div>
     <div class="col-md-7">
-      <h2 class="text-dark"> <?php echo $blog->title; ?></h2>
-      <div>Written by <a href="/">@<?php echo $blog->blog_user_first_name . '' . $blog->blog_user_last_name ?></a></div>
+        <h2 class="text-dark"> <?php echo $blog->title; ?> <span class="badge badge-secondary"><a href='?controller=blog&action=category&categoryid=<?php echo $blog->category_id ?>'><?php echo $blog->category ?></a></span></h2>
+      <div>Written by <a href="?controller=blog&action=user&userid=<?php $blog->user_id ?>">@<?php echo $blog->blog_user_first_name . '' . $blog->blog_user_last_name ?></a></div>
       <div class="text-secondary">(<?php echo $blog->date_created; ?>)</div>
       <table class="table mt-4">
           <tbody>
