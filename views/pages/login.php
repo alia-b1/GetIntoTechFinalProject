@@ -4,10 +4,12 @@
 
 <!-- Header -->
 
-<h2>Howdy partner!</h2>
+<h2>Howdy partner!</h2><br>
 
 <!-- Content -->
 
+Please login using your credentials below.
+<br>
 <?php
 
 if(!empty($_POST)){
