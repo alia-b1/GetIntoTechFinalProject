@@ -31,7 +31,7 @@ class Blog {
   public static function all() {
     $list = [];
     $db = Db::getInstance();
-    $req = $db->query('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id;');
+    $req = $db->query('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id WHERE blog.id >100;');
     // we create a list of Product objects from the database results
     foreach($req->fetchAll() as $blog) {
       $list[] = new Blog ($blog['id'], $blog['title'], $blog['date_created'], $blog['user_id'], $blog['first_name'], $blog['last_name'], $blog['movie_id'], $blog['content'], $blog['movie_title'], $blog['release_year'], $blog['director'], $blog['movie_poster']);

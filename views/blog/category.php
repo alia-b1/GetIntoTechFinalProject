@@ -1,4 +1,4 @@
-<p>Here is a list of all Blog articles in this Category:</p>
+<h2>Here is a list of all Blog articles in this Category:</h2>
 <br>
 <?php foreach($blogs as $blog) { ?>
   <p>

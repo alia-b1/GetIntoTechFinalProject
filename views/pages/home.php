@@ -22,7 +22,7 @@
         <div class="post-meta-bottom">
             <p class="post-tags">
                 <a href="" rel="tag">JJ Abrams</a>
-                <a href="" rel="tag">Science Fiction</a>
+                <a href="?controller=blog&action=category&categoryid=3" rel="tag">Science Fiction</a>
             </p>
         </div>
     </div>
