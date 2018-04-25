@@ -131,7 +131,13 @@ class Blog {
       
       return $list;
     } catch (PDOException $e) {
-      die("Could not complete the search ....." . $e->getMessage());
+        $count=$req->rowCount();
+        if ($count <0) {
+      echo "Sorry there are no results matching this search";
+      require_once('views/pages/error.php');
+     die("Could not complete the search ....." . $e->getMessage());
+    } 
+     
     }
 
     unset($search);
