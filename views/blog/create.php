@@ -7,23 +7,24 @@
 <h2>Shout it from the rooftops!</h2>
 
 <!-- Content -->
+Seen a film that you like, or something that's even worse than "Snakes on a Plane"? Tell us all about it!
 
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data" id="articleform">
-         <label>Title</label>
+         <label>Title: </label>
         <input class="w3-input" type="text" name="title" required autofocus>
-    </p>
+        </p><br>
     <p>
-              <label>Date</label> 
+              <label>Date: </label> 
               <input class="w3-input" type="date" name="datetoday" placeholder="YYYY-MM-DD"required>  
-    </p>
+    </p><br>
     <p>
-        <label>Email</label>
+        <label>E-mail: </label>
         <input class="w3-input" type="text" name="email" required autofocus>
-    </p>
+    </p><br>
         <p>
         <label>Password</label>
         <input class="w3-input" type="password" name="password" required autofocus>
-    </p>
+        </p><br>
 <!--    <p>
         <label>Your Article</label>
         <input class="w3-input" type="text" name="article" required autofocus>

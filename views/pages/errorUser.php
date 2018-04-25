@@ -8,9 +8,11 @@
 <!-- Content -->
 
 <div class="w3-container w3-red">
-    <h3>Submission failed!</h3>
+    <h3>Submission failed!</h3><br>
 <p>Oops, this is the error page.</p>
-<p>It looks like you are not registered or have entered the wrong information; please register or re-enter your details.</p>
-<a href="?controller=blog&action=create"><h3>Try again?</h3></a>
+            <img src="../images/standard/MarilynOops.jpg" alt=""/>
+<br><br>
+<p>It looks like you are not registered or have entered the wrong information; please register or re-enter your details.</p><br>
+<a href="?controller=blog&action=create"><h3>Try again?</h3></a><br>
 
 </div>
