@@ -8,7 +8,7 @@ class DB {
     public static function getInstance() {
       if (!isset(self::$instance)) {
         $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-        self::$instance = new PDO('mysql://s79qmrb4viy91ag7:zvbwjbe5bf592kg4@dz8959rne9lumkkw.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/n00jghnrh4qt3q67;dbname=n00jghnrh4qt3q67', 's79qmrb4viy91ag7', 'zvbwjbe5bf592kg4', $pdo_options);
+        self::$instance = new PDO('mysql://s79qmrb4viy91ag7:zvbwjbe5bf592kg4@dz8959rne9lumkkw.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/n00jghnrh4qt3q67', 's79qmrb4viy91ag7', 'zvbwjbe5bf592kg4', $pdo_options);
       }
       return self::$instance;
     }
