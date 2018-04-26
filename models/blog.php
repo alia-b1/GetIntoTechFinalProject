@@ -182,7 +182,7 @@ class Blog {
   public static function searchMovie($movieid){
     $list = [];
     $db = Db::getInstance();
-    $req = $db->prepare('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster, category.category, category.ID as category_id FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id WHERE movie.ID = :movieid');
+    $req = $db->prepare('SELECT blog.id, blog.title, blog.date_created, blog.user_id, blog_user.first_name, blog_user.last_name, blog.movie_id, blog.content, movie.movie_title, movie.release_year, movie.director, movie.movie_poster, category.category, category.ID AS category_id FROM blog INNER JOIN movie ON blog.movie_ID = movie.ID INNER JOIN blog_user ON blog.user_id = blog_user.id INNER JOIN category on movie.category_ID = category.id WHERE blog.movie_id = :movieid');
     // we create a list of Product objects from the database results
     $req->bindParam(':movieid', $movieid);
     $req->execute();
