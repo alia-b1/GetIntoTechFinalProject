@@ -52,7 +52,7 @@
         </div>
         <!-- End of Wrapping -->
         <br>
-        <div class="container-fluid" style="margin: 25px">
+        <div class="container-fluid" style="padding: 25px">
             <div class="row">
                 <div class="col-sm-12 col-md-8">
                     <?php
