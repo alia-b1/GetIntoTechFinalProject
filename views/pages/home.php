@@ -38,13 +38,13 @@
 
 <!-- Post Navigation -->
 <div class="post-nav">
-    <a class="post-nav-older" title="Previous post" href="insert link to post here">
-    <h5>Previous post</h5>Insert name of earlier post here</a>
-    <a class="post-nav-newer" title="Next post:" href="insert link to post here">
-    <h5>Next post</h5>Insert name of next post here</a>
+    <a class="post-nav-older" title="Previous post" href="?controller=blog&action=read&id=23">
+    <h5>Previous post</h5>A gigantic family film</a>
+    <a class="post-nav-newer" title="Next post:" href="?controller=blog&action=read&id=25">
+    <h5>Next post</h5>Feeling kinda blue!</a>
 </div>
 <!-- End of Post Navigation -->
-
+<br>
 <!-- Comments -->
 <div id="respond" class="comment-respond">
     <h3 class="widget-title">Comments:</h3>

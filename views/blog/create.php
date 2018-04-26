@@ -7,7 +7,7 @@
 <h2>Shout it from the rooftops!</h2>
 
 <!-- Content -->
-Seen a film that you like, or something that's even worse than "Snakes on a Plane"? Tell us all about it!
+Seen a film that you like, or something that's even worse than "Snakes on a Plane"? Tell us all about it!<br>
 
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data" id="articleform">
          <label>Title: </label>
@@ -24,7 +24,7 @@ Seen a film that you like, or something that's even worse than "Snakes on a Plan
         <p>
         <label>Password</label>
         <input class="w3-input" type="password" name="password" required autofocus>
-        </p><br>
+        </p>
 <!--    <p>
         <label>Your Article</label>
         <input class="w3-input" type="text" name="article" required autofocus>

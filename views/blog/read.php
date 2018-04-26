@@ -2,7 +2,7 @@
 <!-- Content -->
 <div class="row">
     <div class="col-sm-12 col-md-5">
-        <img src="<?php echo $blog->movie_poster?>" alt="Movie Image" style="height:300px;">
+        <img src="<?php echo $blog->movie_poster?>" alt="Movie Image"">
     </div>
     <div class="col-md-7">
         <h2 class="text-dark"> <?php echo $blog->title; ?> <span class="badge badge-secondary"><a href='?controller=blog&action=category&categoryid=<?php echo $blog->category_id ?>'><?php echo $blog->category ?></a></span></h2>

@@ -9,6 +9,6 @@
 <!-- Content -->
 
         <p>This is the error page - it looks like something went wrong :(<br><br>
-            <img src="../images/standard/MarilynOops.jpg" alt=""/>
+            <img src="../images/standard/MarilynOops.jpg" alt="" width="150"/>
 <br><br>
 <a href="javascript://" onclick="history.back();">Go back (to the future)?</a>
